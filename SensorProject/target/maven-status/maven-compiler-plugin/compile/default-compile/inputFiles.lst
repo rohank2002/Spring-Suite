@@ -11,6 +11,7 @@ D:\Egen\SensorProject\src\main\java\com\example\Service\AlertServiceImpl.java
 D:\Egen\SensorProject\src\main\java\com\example\Entity\Reading.java
 D:\Egen\SensorProject\src\main\java\com\example\Service\ReadingsService.java
 D:\Egen\SensorProject\src\main\java\com\example\Service\AlertService.java
+D:\Egen\SensorProject\src\main\java\com\example\Controller\AlertController.java
 D:\Egen\SensorProject\src\main\java\com\example\Repository\ReadingsRepo.java
 D:\Egen\SensorProject\src\main\java\com\example\Exception\AlertNotFoundException.java
 D:\Egen\SensorProject\src\main\java\com\example\Controller\ReadingsController.java

@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RestController;
 public interface ReadingsRepo extends CrudRepository<Reading,String> {
 
-
+    Iterable<Reading> findReadingByVin(String vin);
 
 }

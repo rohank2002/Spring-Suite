@@ -40,12 +40,16 @@ public class ReadingServiceImpl implements ReadingsService {
 
     @Override
     @Transactional(readOnly = true)
-    public Reading findOne(String vin) {
-        Optional<Reading> reading = repo.findById(vin);
-     if(!reading.isPresent()){
-        throw new ReadingNotFoundException("No readings found for vin : "+reading.get().getVin().toString());
-     }
-     return  reading.get();
+    public List<Reading> findReadingByVin(String vin) {
+        Iterable<Reading> reading = repo.findReadingByVin(vin);
+        List<Reading> result = new ArrayList<>();
+        for(Reading reading1: reading){
+            result.add(reading1);
+        }
+        if(result.size()==0){
+            throw new ReadingNotFoundException("No Readings for Vin: "+vin);
+        }
+        return result;
     }
 
     @Override

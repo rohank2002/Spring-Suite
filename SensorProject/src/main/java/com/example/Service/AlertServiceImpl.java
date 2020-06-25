@@ -4,10 +4,11 @@ import com.example.Entity.Alert;
 import com.example.Exception.AlertNotFoundException;
 import com.example.Repository.AlertRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Service
 public class AlertServiceImpl implements AlertService {
     @Autowired
     private AlertRepo alertRepo;
