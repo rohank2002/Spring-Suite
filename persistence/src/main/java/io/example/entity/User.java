@@ -12,7 +12,7 @@ public class User {
     private String lastName;
     @Column(unique = true)
     private String email;
-    @ManyToOne
+    @OneToOne
     private Address address;
 
     public Address getAddress() {

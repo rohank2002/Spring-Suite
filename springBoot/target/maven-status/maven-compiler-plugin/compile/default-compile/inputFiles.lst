@@ -1,0 +1,8 @@
+D:\Egen\springBoot\src\main\java\accademy\ennate\Controller\EmployeeController.java
+D:\Egen\springBoot\src\main\java\accademy\ennate\service\EmpServiceImpl.java
+D:\Egen\springBoot\src\main\java\accademy\ennate\service\EmployeeService.java
+D:\Egen\springBoot\src\main\java\accademy\ennate\Application.java
+D:\Egen\springBoot\src\main\java\accademy\ennate\entity\Employee.java
+D:\Egen\springBoot\src\main\java\accademy\ennate\exception\DuplicateEmail.java
+D:\Egen\springBoot\src\main\java\accademy\ennate\exception\EmployeeNotFound.java
+D:\Egen\springBoot\src\main\java\accademy\ennate\Repository\EmployeeRepo.java

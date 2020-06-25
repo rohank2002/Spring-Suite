@@ -1,11 +1,14 @@
 package accademy.ennate;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -16,6 +19,9 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 public class JPAConfig {
+    @Autowired
+    Environment env;
+
     @Bean
     public LocalContainerEntityManagerFactoryBean emf(){
         LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
@@ -34,6 +40,7 @@ public class JPAConfig {
     @Bean
     public DataSource getDataSource(){
         DriverManagerDataSource ds = new DriverManagerDataSource();
+//        System.out.println(env.getProperty("db.url")+"------------------------");
         ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
         ds.setUrl("jdbc:mysql://127.0.0.1:3306/emp_db");
         ds.setUsername("root");

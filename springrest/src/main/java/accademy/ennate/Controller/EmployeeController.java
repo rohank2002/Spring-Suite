@@ -39,8 +39,9 @@ public class EmployeeController {
         service.delete(empId);
     }
 
-    @GetMapping(path = "/email{emailId}",produces = "application/json")
-    public Employee findByEmail(@PathVariable("emailId") String email){
+    @GetMapping(path = "byEmail",produces = "application/json")
+    public Employee findByEmail(@RequestBody String email){
+
         return service.findByEmail(email);
 
     }
